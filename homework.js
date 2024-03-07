@@ -7,13 +7,13 @@ while (inputData) {
     const person = new Person(arr[0], arr[1].trim(), arr[2].trim(), arr[3]);
     let uniqueIDcheck = +arr[0];
     let res = findPersons(persons,uniqueIDcheck);
-    if (res === true) {
+    if (res) {
             alert ('Error! The person with this ID is already added');}
     else {
             persons.push(person);
     }
     }
-    inputData = prompt('Enter person data separate by ","','1,John,Doe,1');
+    inputData = prompt('Enter person data separated by ","','1,John,Doe,1');
 }
 
 printPersons (persons);
